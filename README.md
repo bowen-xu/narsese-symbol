@@ -1,6 +1,6 @@
 # Narsese Symbols
 
-A LaTeX package providing typeset symbols for NARSese (NARS Entity Representation Language), the formal notation language of [OpenNARS](https://github.com/opennars/OpenNARS) and related NARS implementations.
+A LaTeX package providing typeset symbols for Narsese (the formal language of Non-Axiomatic Logic and NARS, see [OpenNARS](https://github.com/opennars/OpenNARS)).
 
 ![preview](imgs/preview.png)
 
