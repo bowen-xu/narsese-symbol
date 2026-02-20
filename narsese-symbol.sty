@@ -1,0 +1,42 @@
+\NeedsTeXFormat{LaTeX2e}
+\ProvidesPackage{narsese-symbol}[2026/02/19 A LaTeX package for typesetting Narsese symbols]
+
+\RequirePackage{graphicx} % for \scalebox
+
+
+
+\DeclareRobustCommand{\seq}{\mathrel{\wedge\!\!\!/ \,}}
+\DeclareRobustCommand{\parr}{\mathrel{\wedge\!\!\!| \; }}
+\DeclareRobustCommand{\op}{\mathrel{\Uparrow\!\!}}
+
+\DeclareRobustCommand{\copulasymbol}[1]{%
+  \mathrel{\mathchoice
+    {\mathbin{#1}}
+    {\mathbin{#1}}
+    {\mathbin{\scriptstyle #1}}
+    {\mathbin{\scriptstyle #1}}
+  }%
+}
+
+% predictive implication
+\DeclareRobustCommand{\predimply}{\copulasymbol{\ooalign{\kern0.22em$\vcenter{\hbox{\scalebox{0.6}[0.5]{\textbf{/}}}}$\hfill\cr$\Rightarrow$}}} % =/>
+% predictive equivalence
+\DeclareRobustCommand{\predequiv}{\copulasymbol{\ooalign{\hfil$\vcenter{\hbox{\scalebox{0.6}[0.5]{\textbf{/}}}}$\hfil\cr$\Leftrightarrow$}}} % </>
+% retrospective implication
+\DeclareRobustCommand{\retrimply} {\copulasymbol{\ooalign{\kern0.22em$\vcenter{\hbox{\scalebox{0.6}[0.5]{\textbf{\textbackslash}}}}$\hfill\cr$\Rightarrow$}}} % =\>
+% concurrent implication
+\DeclareRobustCommand{\concimply}{\copulasymbol{\ooalign{\kern0.32em$\vcenter{\hbox{\scalebox{0.6}[0.5]
+{\textbf{\textbar}}}}$\hfill\cr$\Rightarrow$}}} % =|>
+% concurrent equivalence
+\DeclareRobustCommand{\concequiv}{\copulasymbol{\ooalign{\hfil$\vcenter{\hbox{\scalebox{0.6}[0.5]{\textbf{\textbar}}}}$\hfil\cr$\Leftrightarrow$}}} % <|>
+
+% truth value
+\DeclareRobustCommand{\truthv}[2]{ %
+  \ensuremath{\langle #1; #2 \rangle} %
+}
+
+% desire value
+\DeclareRobustCommand{\desirev}[2]{ %
+  \truthv{#1}{#2} %
+}
+
