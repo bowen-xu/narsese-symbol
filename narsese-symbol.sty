@@ -30,6 +30,15 @@
 % concurrent equivalence
 \DeclareRobustCommand{\concequiv}{\copulasymbol{\ooalign{\hfil$\vcenter{\hbox{\scalebox{0.6}[0.5]{$\bm{\vert}$}}}$\hfil\cr$\Leftrightarrow$}}} % <|>
 
+% inheritance
+\DeclareRobustCommand{\inherit}
+{\mathrel{\rightarrow}} % -->
+
+% similarity
+\DeclareRobustCommand{\similar}
+{\mathrel{\leftrightarrow}} % -->
+
+
 % truth value
 \DeclareRobustCommand{\truthv}[2]{ %
   \ensuremath{\langle #1; #2 \rangle} %
